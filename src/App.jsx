@@ -1,11 +1,22 @@
 import "./App.css";
+import { Container } from "@mui/material";
+import { Searcher } from "./components/Searcher/Searcher";
+
+const containerStyles = {
+  backgroundColor: "whitesmoke",
+  width: "80vw",
+  height: "500px",
+  borderRadius: "16px",
+  marginTop: "40px",
+  display: "flex",
+  flexDirection: "column",
+  alignItemns: "center",
+};
 
 export const App = () => {
   return (
-    <div className="App">
-      <p>github</p>
-    </div>
+    <Container sx={{ ...containerStyles }}>
+      <Searcher />
+    </Container>
   );
 };
-
-export default App;
