@@ -1,6 +1,7 @@
 import "./App.css";
 import { Container } from "@mui/material";
 import { Searcher } from "./components/Searcher/Searcher";
+import { useState } from "react";
 
 const containerStyles = {
   backgroundColor: "whitesmoke",
@@ -14,9 +15,13 @@ const containerStyles = {
 };
 
 export const App = () => {
+  const [searchedValue, setSearchedValue] = useState("JuanDeossa");
   return (
     <Container sx={{ ...containerStyles }}>
-      <Searcher />
+      <Searcher
+        searchedValue={searchedValue}
+        setSearchedValue={setSearchedValue}
+      />
     </Container>
   );
 };
