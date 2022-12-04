@@ -10,7 +10,7 @@ const containerStyles = {
   marginTop: "40px",
   display: "flex",
   flexDirection: "column",
-  alignItemns: "center",
+  alignItems: "center",
 };
 
 export const App = () => {
