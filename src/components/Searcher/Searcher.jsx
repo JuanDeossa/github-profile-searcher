@@ -1,15 +1,16 @@
 import { Stack, TextField, IconButton, InputAdornment } from "@mui/material";
 import SearchTwoToneIcon from "@mui/icons-material/SearchTwoTone";
+import { useState } from "react";
 
 export const Searcher = (props) => {
   const { searchedValue, setSearchedValue } = props;
-
+  const [onChangeValue, setOnChangeValue] = useState("")
   const handleValue = (e) => {
     const value = e.target.value;
-    setSearchedValue(value);
+    setOnChangeValue(value);
   };
   const handkeSubmit = () => {
-    console.log(searchedValue);
+    setSearchedValue(onChangeValue)
   };
   return (
     <Stack
